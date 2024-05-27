@@ -1,0 +1,52 @@
+What is JavaScript. How to use it?
+
+JavaScript:
+
+=> JavaScript is a lightweight, cross-platform, single-threaded, and interpreted compiled programming      language. 
+
+=> It is also known as the scripting language for webpages. 
+
+=> It is well-known for the development of web pages, and many non-browser environments also use it.
+
+=> JavaScript is a dynamically typed language. 
+
+=> JavaScript can be used for Client-side developments as well as Server-side developments.
+
+How to use JavaScript:
+
+*  Using Console Tab of Web Browsers:
+
+=> All the popular web browsers have built-in JavaScript engines. Hence, you can run JavaScript on a browser. To run JavaScript on a browser,
+
+=> Open your favorite browser (here we will use Google Chrome).
+
+=> Open the developer tools by right clicking on an empty area and select Inspect. Shortcut: F12.
+
+=> On the developer tools, go to the console tab. Then, write JavaScript code and press enter to run the code.
+
+*Using Node.js:
+
+=> Node is a back-end run-time environment for executing JavaScript code. To run JS using Node.js, follow these steps:
+
+=> Install the latest version of Node.js.
+
+=> Install an IDE/Text Editor like Visual Studio Code. In VS code, create a file > write JS code > save it with .js extension.
+
+=> Open up the terminal/command prompt > navigate to the file location > type node hello.js > hit enter.
+
+=> You will get output on the terminal.
+
+* By Creating Web Pages:
+
+=> JavaScript was initially created to make web pages interactive, that's why JavaScript and HTML go hand in hand. To run JS from a webpage, follow these steps:
+
+=> Open VS Code > Go to File > New File > Save it with .html extension. For example, main.html.
+Copy this doctype (minimum valid HTML code) and save it in the file.
+
+=> Similarly create a JS file, write the following JS code and save it with .js extension like main.js.
+
+=> From inside the HTML file, we need to link the main.js file to use it. You can achieve that by adding the following code in main.html.
+
+=> Open the main.html file using a browser.
+
+=> To check if our JS code ran or not, Right click on the web page > Inspect > Choose console tab.

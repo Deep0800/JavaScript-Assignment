@@ -1,0 +1,58 @@
+How many type of Variable in JavaScript?
+
+=>In JavaScript, there are three primary ways to declare variables using keywords: var, let, and const. Each has different characteristics and use cases. Let's explore each type in detail:
+
+1. var:
+
+* Scope: Variables declared with var are function-scoped, meaning they are accessible within the function they are declared in. If declared outside of a function, they are globally scoped.
+
+* Hoisting: Variables declared with var are hoisted to the top of their function or global scope, which means they can be used before they are declared.
+
+* Re-declaration: Variables declared with var can be re-declared within the same scope.
+
+Example:
+            function myFunction() {
+                var message = "Hello, world!";
+                console.log(message);
+            }
+            myFunction();
+
+2. let:
+
+* Scope: Variables declared with let are block-scoped, meaning they are accessible only within the block      (e.g., within {}) they are declared in.
+
+*Hoisting: let variables are hoisted, but you cannot use them before their declaration due to the "temporal dead zone."
+
+* Re-declaration: Variables declared with let cannot be re-declared within the same scope.
+
+Example:
+            function myFunction() {
+                let message = "Hello, world!";
+                if (true) {
+                    let innerMessage = "Inside the block";
+                    console.log(innerMessage);
+                }
+                console.log(message);
+            }
+            myFunction();
+
+3. const:
+
+* Scope: Variables declared with const are block-scoped, similar to let.
+
+* Hoisting: const variables are hoisted, but you cannot use them before their declaration due to the "temporal dead zone."
+
+* Immutability: Variables declared with const must be initialized at the time of declaration and cannot be reassigned afterward. Note that while the variable cannot be reassigned, the properties of objects and arrays declared with const can still be modified.
+
+* Re-declaration: Variables declared with const cannot be re-declared within the same scope.
+
+Example:
+            function myFunction() {
+                const message = "Hello, world!";
+                console.log(message);
+    
+                const myArray = [1, 2, 3];
+                myArray.push(4); // Allowed: modifying the array, not reassigning the variable
+                console.log(myArray);
+            }
+            myFunction();

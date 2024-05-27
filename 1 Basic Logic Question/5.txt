@@ -1,0 +1,21 @@
+What the deference between undefined and undeclare in JavaScript?
+
+Aspect	            Undefined	                                            Undeclared
+Definition	    A variable that has been declared           A variable that has not been declared in the
+                but not initialized with a value.           current scope using a declaration keyword
+                It can also refer to the absence of         (let, const, or var).
+                a property on an object.	  
+
+Access	        When you access an undefined variable,      Accessing an undeclared variable results 
+                you get the value undefined.	            in a ReferenceError.
+
+Declaration	    Declared in the current scope but not       Not declared in the current scope.
+                initialized with a value.	
+
+Error Handling	Accessing an undefined variable does not    Accessing an undeclared variable will throw 
+                cause an error; it simply returns the       a ReferenceError indicating that the variable 
+                value undefined.	                        is not defined.
+
+Example	        javascript\nlet                             javascript\nconsole.log(y); // Throws
+                x;\nconsole.log(x); // Outputs:             ReferenceError: y is not defined\n
+                undefined\n	  

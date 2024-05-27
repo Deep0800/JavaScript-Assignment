@@ -1,0 +1,33 @@
+What is the difference between && and || in JavaScript? 
+
+Logical AND (&&)                                                             Logical OR (||)
+
+Operator: &&                                                                   Operator: ||               
+
+Behavior: The && operator evaluates to true if                      Behavior: The || operator evaluates to
+both operands are true. If either operand is false,                 true if at least one operand is true.
+the overall expression evaluates to false.                          if both operands are false, the overall 
+                                                                    expression evaluates to false.
+
+Short-circuit evaluation: The evaluation stops as soon              Short-circuit evaluation: The evaluation 
+as the operator finds an operand that evaluates to false.           stops as soon as the operator finds an 
+This means if the first operand is false, the second operand        operand hat evaluates to true. This means
+is not evaluated, and the expression immediately returns false.     if the first operand is true, the second
+                                                                    operand is not evaluated, and the expression immediately returns true.
+
+Example 1:                                                          Example 1:
+
+console.log(true && true); // Outputs: true                         console.log(true || true);
+console.log(true && false); // Outputs: false                       console.log(true || false);
+console.log(false && true); // Outputs: false                       console.log(false || true);
+console.log(false && false); // Outputs: false                      console.log(false || false);
+
+Example 2:                                                          Example 2:
+
+let age = 25;                                                       let color = "red";
+if (age >= 18 && age <= 65) {                                       if (color === "red" || color === "blue") {
+    console.log("You are eligible to work.");                           console.log("You chose red or blue.");
+} else {                                                            } else {
+    console.log("You are not eligible to work.");                       console.log("You chose a different
+}                                                                       color.");
+                                                                    }

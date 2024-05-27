@@ -1,0 +1,31 @@
+What is the use of Void (0)? 
+
+=> In JavaScript, the expression void(0) is commonly used to prevent a script from causing any side effects when executing an expression or function.
+
+=> What void Does:
+
+The void operator is a unary operator that evaluates an expression and then discards its value, returning undefined.
+
+The expression inside the parentheses can be any JavaScript expression or function call.
+
+=> Common Usage:
+
+Preventing Default Action: The most common use of void(0) is to prevent the default action of a link (<a>) element when the link is clicked. By setting the href attribute of the link to "javascript:void(0)", you can effectively make the link unclickable or prevent the browser from navigating to a new page.
+
+<a href="javascript:void(0)">Click Me</a>
+
+Code Execution: In some cases, void is used to execute a JavaScript statement without caring about its return value.
+
+Bookmarklets: In bookmarklets (JavaScript code saved as a browser bookmark), void(0) can be used to prevent the browser from navigating away from the current page.
+
+=> Why Use void(0):
+
+The expression void(0) is a simple way to achieve a return value of undefined from an expression, even if the original expression would otherwise return a different value.
+
+It is often used in scenarios where you want to prevent the default behavior of an event or link, or where you need a JavaScript statement to execute without affecting the current page or state.
+
+Example:
+
+Preventing default action of a link:   <a href="javascript:void(0)">Click Me</a>
+
+Using void(0) in a bookmarklet:   javascript:void(0);

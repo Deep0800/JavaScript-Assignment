@@ -1,0 +1,90 @@
+Define a Data Types in js?
+
+=>In JavaScript, data types define the kind of data that variables can hold and the operations that can be performed on them. JavaScript has dynamic typing, which means variables can hold any type of data, and the data type can change during execution.
+
+=> Primitive Data Types:
+
+    * Number:
+                Represents numeric values, including integers and floating-point numbers.
+                
+                Examples: 
+                            42, 3.14, -5
+                
+                Special values include Infinity, -Infinity, and NaN (Not a Number).
+
+    * String:
+                Represents a sequence of characters (text).
+
+                Strings can be enclosed in single quotes ('), double quotes ("), or backticks (for template literals).
+
+                Examples: 
+                            'Hello', "World", `This is a template literal`
+
+    * Boolean:
+                Represents a logical value: true or false.
+
+    * Null:
+                Represents the intentional absence of any object value.
+
+                Often used to indicate that a variable has no value or is empty.
+
+    * Undefined:
+                    Represents a variable that has been declared but not initialized.
+
+                    Can also indicate that a property does not exist on an object.
+
+    * Symbol:
+                Represents a unique and immutable value, primarily used for creating unique property keys in objects.
+
+    * BigInt:
+                Represents large integers that exceed the safe integer limit (Number.MAX_SAFE_INTEGER) in JavaScript.
+
+                Created using the BigInt constructor or by appending n to a number: BigInt(12345678901234567890) or 12345678901234567890n.
+
+=> Complex Data Types:
+    
+    * Object:
+                Represents a collection of key-value pairs.
+
+                Can hold properties and methods, and is the base type for other complex data types.
+
+                Examples: 
+                            {name: 'Alice', age: 30}, new Date(), [] (arrays)
+  
+    * Array:
+                A special kind of object that represents a list-like collection of elements.
+
+                Elements are indexed and can be of any data type.
+
+                Examples: 
+                            [1, 2, 3], ['apple', 'banana', 'cherry']
+
+    * Function:
+                    A special kind of object that represents a reusable block of code (function).
+
+                    Can be called with arguments and may return a value.
+
+                    Examples: 
+                                function add(a, b) { return a + b; }, () => console.log('Hello')
+
+=> Other Data Types:
+
+    * Date:
+                Represents dates and times.
+
+                Provides methods for manipulating date and time values.
+
+                Example: 
+                            new Date() creates a new Date object representing the current date and time.
+
+    * Map:
+            Represents a collection of key-value pairs where keys can be any data type.
+            
+            Example: 
+                        const map = new Map(); map.set('name', 'Alice');
+
+    * Set:
+            Represents a collection of unique values.
+            
+            Example: 
+                        const set = new Set([1, 2, 3, 1]); (the set will only contain unique values: 1, 2, 3).

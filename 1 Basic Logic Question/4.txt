@@ -1,0 +1,22 @@
+Write a mul Function Which will Work Properly When invoked With Following Syntax.
+
+=> To create a mul function in JavaScript that works properly with a specific syntax, such as a function that can chain calls to multiply multiple numbers, you can use a function that returns another function. This way, you can chain calls to multiply additional numbers.
+
+=> Here is an example of a mul function that achieves this behavior:
+
+function mul(a) {
+    function multiply(b) {
+        a *= b; // Multiply the current product with the new number
+        return multiply;
+    }
+    
+    // Add a `toString` method to handle the final conversion to a number
+    multiply.toString = function() {
+        return a;
+    };
+    
+    return multiply;
+}
+
+// Example usage:
+console.log(mul(2)(3)(4).toString());
