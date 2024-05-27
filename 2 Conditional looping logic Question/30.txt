@@ -1,0 +1,57 @@
+What are the looping structures in JavaScript? Any one Example?
+
+=> for Loop:
+
+The for loop is a common loop structure that consists of three parts: initialization, condition, and increment/decrement.
+
+The loop executes as long as the condition is true.
+
+Example:
+            for (let i = 0; i < 5; i++) {
+                console.log(i);   
+            }
+
+=> while Loop:
+
+The while loop executes a block of code as long as a specified condition is true.
+
+The condition is checked before each iteration of the loop.
+
+Example:
+            let i = 0;
+            while (i < 5) {
+                console.log(i);
+                i++;
+            }
+=> do...while Loop:
+
+The do...while loop is similar to the while loop, but it ensures that the loop body is executed at least once, even if the condition is false at the start.
+
+Example:
+            let i = 0;
+            do {
+                console.log(i);
+                i++;
+            } while (i < 5);
+
+=> for...in Loop:
+
+The for...in loop iterates over the enumerable properties (keys) of an object.
+
+Example:
+            const obj = { a: 1, b: 2, c: 3 };
+            for (const key in obj) {
+                console.log(`${key}: ${obj[key]}`);
+            }
+
+=> for...of Loop:
+
+The for...of loop iterates over iterable objects such as arrays, strings, and other collections.
+
+It provides an easy way to iterate over the values of an iterable.
+
+Example:
+            const array = [1, 2, 3, 4, 5];
+            for (const value of array) {
+                console.log(value); // Outputs 1, 2, 3, 4, 5
+            }

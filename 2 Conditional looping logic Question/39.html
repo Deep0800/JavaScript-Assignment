@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let count = 0;
+
+    function isPalindrome(num) {
+      const strNum = num.toString();
+      const reversedStrNum = strNum.split("").reverse().join("");
+      return strNum === reversedStrNum;
+    }
+
+    function checkPalindrome() {
+      while (count < 3) {
+        const num = prompt(`Enter number ${count + 1}:`);
+        if (num === null || num === "") {
+          alert("Invalid input. Please enter a number.");
+          continue; // Skip to next iteration if input is invalid
+        }
+        if (isPalindrome(num)) {
+          alert(`${num} is a palindrome.`);
+        } else {
+          alert(`${num} is not a palindrome.`);
+        }
+        count++;
+      }
+    }
+
+    checkPalindrome();
+  </script>
+</html>
