@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+   <style>
+    .form{
+        border: 1px solid black;
+        width: 300px;
+        padding:30px;
+    }
+   </style>
+  </head>
+  <body>
+    <h2>Form Validation</h2>
+
+    <form class="form" name="myForm" onsubmit="return validateForm()">
+      Name: <input type="text" name="name" /><br /><br />
+      Email: <input type="text" name="email" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    function validateForm() {
+      const name = document.forms["myForm"]["name"].value;
+      const email = document.forms["myForm"]["email"].value;
+
+      if (name === "") {
+        alert("Name must be filled out");
+        return false;
+      }
+
+      if (email === "") {
+        alert("Email must be filled out");
+        return false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Invalid email address");
+        return false;
+      }
+
+      alert("Form submitted successfully");
+      return true;
+    }
+  </script>
+</html>

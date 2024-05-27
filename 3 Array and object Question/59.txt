@@ -1,0 +1,19 @@
+=>DOM (Document Object Model):
+
+The DOM represents the structure of an HTML or XML document as a tree-like structure, where each node represents an element (such as <div>, <p>, <span>, etc.), attribute, or text content of the document.
+
+It provides a way for programs and scripts to access, manipulate, and update the content, structure, and style of a web page dynamically.
+
+Through the DOM, JavaScript can add, remove, or modify elements, change styles, handle events, and perform other actions that affect the appearance or behavior of the web page.
+
+Example methods include getElementById(), querySelector(), createElement(), appendChild(), etc.
+
+=>BOM (Browser Object Model):
+
+The BOM represents the browser itself as an object-oriented entity and provides objects and methods to interact with the browser window and its components, such as the location bar, history, navigator, and screen.
+
+Unlike the DOM, the BOM is not standardized, and its features vary across different browsers. However, common features include managing browser history, opening new windows or tabs, controlling browser navigation, handling cookies, and accessing information about the user's browser and operating system.
+
+The BOM is mainly used for tasks related to browser management and interaction, such as controlling the browser window, detecting user's browser features, and performing actions not directly related to the content of the web page.
+
+Example objects include window, location, history, navigator, screen, document, etc.

@@ -1,0 +1,19 @@
+<!-- How can a page be forced to load another page in JavaScript? -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Redirect to another page
+      window.location.href = "https://www.google.com";
+
+      setTimeout(function () {
+        window.location.href = "https://www.google.com";
+      }, 3000);
+    </script>
+  </body>
+</html>

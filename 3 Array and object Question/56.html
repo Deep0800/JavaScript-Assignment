@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Form Validation</title>
+    <style>
+      #myForm {
+        border: 1px solid black;
+        width: 300px;
+        padding: 30px;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Dynamic Form Validation</h2>
+
+    <form id="myForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <span id="emailError" class="error"></span>
+      <br /><br />
+
+      <label for="number">Number:</label>
+      <input type="text" id="number" name="number" />
+      <span id="numberError" class="error"></span>
+      <br /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <span id="passwordError" class="error"></span>
+      <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      const form = document.getElementById("myForm");
+
+      form.email.addEventListener("input", validateEmail);
+      form.number.addEventListener("input", validateNumber);
+      form.password.addEventListener("input", validatePassword);
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        validateEmail();
+        validateNumber();
+        validatePassword();
+
+        if (!document.querySelector(".error")) {
+          alert("Form submitted successfully!");
+        }
+      });
+
+      function validateEmail() {
+        const email = form.email.value;
+        const emailError = document.getElementById("emailError");
+        if (!email || !isValidEmail(email)) {
+          emailError.textContent = "Invalid email format";
+        } else {
+          emailError.textContent = "";
+        }
+      }
+
+      function validateNumber() {
+        const number = form.number.value;
+        const numberError = document.getElementById("numberError");
+        if (!number || !isValidNumber(number)) {
+          numberError.textContent = "Invalid number";
+        } else {
+          numberError.textContent = "";
+        }
+      }
+
+      function validatePassword() {
+        const password = form.password.value;
+        const passwordError = document.getElementById("passwordError");
+        if (!password || !isValidPassword(password)) {
+          passwordError.textContent =
+            "Password must be at least 6 characters long";
+        } else {
+          passwordError.textContent = "";
+        }
+      }
+
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function isValidNumber(number) {
+        return !isNaN(number) && isFinite(number) && number.length == 10;
+      }
+
+      function isValidPassword(password) {
+        return password.length >= 6;
+      }
+    </script>
+  </body>
+</html>

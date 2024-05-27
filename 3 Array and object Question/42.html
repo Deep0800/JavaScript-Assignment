@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //Creating Person1 object
+      let person1 = {
+        name: "Dhoni",
+        Age: 41,
+        Trophies: [2007, 2011, 2013],
+      };
+
+      //Creating Person2 object
+      let person2 = {
+        name: "Dhoni",
+        Age: 41,
+        Trophies: [2007, 2011, 2013],
+      };
+      
+      if (person1 === person2){
+        document.write(`Object is Equal <br>`)
+      }else{
+        document.write(`Object is Not Equal <br>`)
+      }
+      
+      if (person1.name === person2.name){
+        document.write(`Name is Equal <br>`)
+      }else{
+        document.write(`Name is Not Equal <br>`)
+      }
+      
+      if (person1.Age === person2.age){
+        document.write(`Age is Equal <br>`)
+      }else{
+        document.write(`Age is Not Equal <br>`)
+      }
+      
+      if (person1.Trophies === person2.Trophies){
+        document.write(`Trophies is Equal <br>`)
+      }else{
+        document.write(`Trophies is Not Equal <br>`)
+      }
+    </script>
+</body>
+</html>

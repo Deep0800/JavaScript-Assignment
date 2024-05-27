@@ -1,0 +1,63 @@
+JavaScript events are actions that occur as a result of user interaction or system events. There are various types of events in JavaScript, categorized based on their origin or source. Here are some common types of JavaScript events:
+
+=> Mouse Events:
+
+click: Occurs when a mouse button is clicked.
+dblclick: Occurs when a mouse button is double-clicked.
+mousedown: Occurs when a mouse button is pressed down.
+mouseup: Occurs when a mouse button is released.
+mousemove: Occurs when the mouse pointer is moved.
+mouseover: Occurs when the mouse pointer moves over an element.
+mouseout: Occurs when the mouse pointer moves out of an element.
+
+=>Keyboard Events:
+
+keydown: Occurs when a key is pressed down.
+keyup: Occurs when a key is released.
+keypress: Occurs when a key is pressed.
+
+=>Form Events:
+
+submit: Occurs when a form is submitted.
+reset: Occurs when a form is reset.
+change: Occurs when the value of an input element changes.
+focus: Occurs when an element receives focus.
+blur: Occurs when an element loses focus.
+
+=>Window Events:
+
+load: Occurs when a resource and its dependent resources have finished loading.
+unload: Occurs when the document is being unloaded.
+resize: Occurs when the browser window is resized.
+scroll: Occurs when the document view is scrolled.
+
+=>Miscellaneous Events:
+
+DOMContentLoaded: Occurs when the HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+error: Occurs when an error occurs during the loading of an external resource (e.g., image load error).
+hashchange: Occurs when the hash part of the URL changes.
+
+Eg:-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Example</title>
+    <script>
+        // Define a function to handle the click event
+        function handleClick() {
+            alert("Button clicked!");
+        }
+
+        // Add an event listener to the button element
+        window.onload = function() {
+            const button = document.getElementById("myButton");
+            button.addEventListener("click", handleClick);
+        };
+    </script>
+</head>
+<body>
+
+<button id="myButton">Click me</button>
+
+</body>
+</html>

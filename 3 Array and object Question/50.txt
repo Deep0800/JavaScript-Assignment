@@ -1,0 +1,7 @@
+One drawback of declaring methods directly in JavaScript objects, especially in certain scenarios, is the lack of code reuse and increased memory usage.
+
+When methods are declared directly within each object instance, separate copies of those methods are created for each instance of the object. This can lead to increased memory usage, especially when dealing with a large number of object instances or when the methods are complex.
+
+Additionally, if you need to update or modify a method that is declared directly within each object instance, you would need to update it for each instance individually, which can be cumbersome and error-prone.
+
+To mitigate these drawbacks, it's often recommended to define methods on the prototype of the constructor function when creating custom object types using constructor functions or classes in JavaScript. This way, the methods are shared among all instances of the object, leading to better memory efficiency and easier maintenance.

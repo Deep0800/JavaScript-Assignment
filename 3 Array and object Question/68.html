@@ -1,0 +1,30 @@
+<!-- Write the code for adding new elements dynamically? -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamically Add Elements</title>
+  </head>
+  <body>
+    <div id="container">
+      <p>Existing content</p>
+    </div>
+
+    <button id="addButton">Add New Element</button>
+
+    <script>
+      function addNewElement() {
+        const newParagraph = document.createElement("p");
+
+        newParagraph.textContent = "New paragraph added dynamically!";
+
+        document.getElementById("container").appendChild(newParagraph);
+      }
+
+      document
+        .getElementById("addButton")
+        .addEventListener("click", addNewElement);
+    </script>
+  </body>
+</html>
